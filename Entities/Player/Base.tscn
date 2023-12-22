@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cja0m2tp1ti8h"]
+
+[ext_resource type="Script" path="res://Entities/Player/Base.gd" id="1_gqngn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cla4"]
+albedo_color = Color(0.639216, 0.572549, 0.0941176, 1)
+
+[node name="Base" type="Node3D" groups=["BASE"]]
+script = ExtResource("1_gqngn")
+
+[node name="Body" type="CSGCylinder3D" parent="."]
+radius = 3.0
+height = 6.0
+sides = 32
+material = SubResource("StandardMaterial3D_1cla4")
+
+[node name="Health_Label" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+billboard = 1
+text = "HEALTH"
+font_size = 500
+outline_size = 100
