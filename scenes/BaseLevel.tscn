@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwaen1k2nbns6"]
+[gd_scene load_steps=13 format=3 uid="uid://cwaen1k2nbns6"]
 
 [ext_resource type="Material" uid="uid://ypwh44fwvdw4" path="res://Assets/materials/Grass-004/grass.tres" id="1_rg1si"]
 [ext_resource type="MeshLibrary" uid="uid://cno63b40u188" path="res://MeshLibrary/SpaceLibrary.tres" id="2_pubki"]
 [ext_resource type="PackedScene" uid="uid://tt6273da8oe3" path="res://Entities/Enemy/Enemy.tscn" id="4_n3mpw"]
 [ext_resource type="PackedScene" uid="uid://cja0m2tp1ti8h" path="res://Entities/Player/Base.tscn" id="5_eulne"]
 [ext_resource type="PackedScene" uid="uid://v14bkg7l0igg" path="res://Entities/RayPickerCamera/ray_picker_camera.tscn" id="5_vxci1"]
+[ext_resource type="Script" path="res://Scenes/TurretManager.gd" id="6_u1lbh"]
+[ext_resource type="PackedScene" uid="uid://cbrl6cjfbtad6" path="res://Entities/Player/Turret.tscn" id="7_cadl4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lbyot"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -53,9 +55,10 @@ data = {
 "cells": PackedInt32Array(65527, 2, 0, 65528, 2, 0, 65529, 2, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65532, 1, 0, 65532, 0, 0, 65532, 65535, 0, 65532, 65534, 0, 65532, 65533, 0, 65532, 65532, 0, 65533, 65532, 0, 65534, 65532, 0, 65535, 65532, 0, 0, 65532, 0, 1, 65532, 0, 2, 65532, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 5, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 6, 2, 0, 5, 2, 0, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 65535, 65534, 0, 65534, 65534, 0, 0, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 2, 0, 65534, 1, 0, 65534, 3, 0, 65534, 4, 0, 65533, 4, 0, 65532, 4, 0, 65531, 4, 0, 65530, 4, 0, 65529, 4, 0, 65528, 4, 0, 65527, 4, 0, 7, 65535, 0)
 }
 
-[node name="RayPickerCamera" parent="." node_paths=PackedStringArray("gridmap") instance=ExtResource("5_vxci1")]
+[node name="RayPickerCamera" parent="." node_paths=PackedStringArray("gridmap", "turret_manager") instance=ExtResource("5_vxci1")]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -3, 28, 12)
 gridmap = NodePath("../GridMap")
+turret_manager = NodePath("../TurretManager")
 
 [node name="Path3D" type="Path3D" parent="."]
 curve = SubResource("Curve3D_u514a")
@@ -124,3 +127,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -38, 0
 [node name="Base" parent="." instance=ExtResource("5_eulne")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -10)
 max_health = 5
+
+[node name="TurretManager" type="Node3D" parent="."]
+script = ExtResource("6_u1lbh")
+Turret = ExtResource("7_cadl4")

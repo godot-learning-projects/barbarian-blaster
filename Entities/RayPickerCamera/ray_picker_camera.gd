@@ -1,6 +1,7 @@
 extends Camera3D
 
 @export var gridmap: GridMap
+@export var turret_manager: TurretManager
 @export var ray_cast_Z_distance: float = 100.0
 @onready var ray_cast_3d = $RayCast3D
 
@@ -12,13 +13,20 @@ func _process(_delta):
 	ray_cast_3d.target_position = target
 	ray_cast_3d.force_raycast_update()
 	
-	#printt(ray_cast_3d.get_collider(), ray_cast_3d.get_collision_point())
-	
 	if ray_cast_3d.is_colliding():
 		var collider = ray_cast_3d.get_collider()
 		if collider is GridMap:
-			#var _collision_point = ray_cast_3d.get_collision_point()
-			var _cell = gridmap.local_to_map(ray_cast_3d.get_collision_point())
-			if gridmap.get_cell_item(_cell) == 0:
-				gridmap.set_cell_item(_cell, 1)
-			
+			var cell = gridmap.local_to_map(ray_cast_3d.get_collision_point())
+			var gridmap_cell = gridmap.get_cell_item(cell)
+			if gridmap_cell == 1:
+				Input.set_default_cursor_shape(Input.CURSOR_FORBIDDEN)
+			else:
+				Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+				
+			if gridmap_cell == 0:
+				if Input.is_action_just_pressed("click"):
+					turret_manager.build_turret(gridmap.map_to_local(cell))
+					gridmap.set_cell_item(cell, 1)
+					
+	else:
+		Input.set_default_cursor_shape(Input.CURSOR_CAN_DROP)
