@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxsnxpfj2xxgf"]
+
+[ext_resource type="Script" path="res://Scripts/EnemyPath.gd" id="1_ecg0r"]
+[ext_resource type="PackedScene" uid="uid://tt6273da8oe3" path="res://Entities/Enemy/Enemy.tscn" id="2_e82tv"]
+
+[sub_resource type="Curve3D" id="Curve3D_u514a"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -38, 0, 14, -1, 0, 1, 1, 0, -1, -10, 0, 14, -1, 0, 1, 1, 0, -1, -10, 0, -10, -1, 0, -1, 1, 0, 1, 10, 0, -10, -1, 0, -1, 1, 0, 1, 10, 0, 6, -1, 0, 1, 1, 0, -1, 26, 0, 6, 0, 0, 0, 0, 0, 0, 26, 0, -10),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvm67"]
+albedo_color = Color(0.454902, 0.27451, 0.0862745, 1)
+
+[node name="EnemyPath" type="Path3D"]
+curve = SubResource("Curve3D_u514a")
+script = ExtResource("1_ecg0r")
+_enemy = ExtResource("2_e82tv")
+
+[node name="Road" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-1, 0, -1, 0.1, 1, 0.1, 1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_kvm67")
+
+[node name="LeftEdge" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(-1.1, 0, -1.1, 0.15, -0.9, 0.15, -0.9, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 2.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_kvm67")
+
+[node name="RightEdge" type="CSGPolygon3D" parent="."]
+polygon = PackedVector2Array(0.9, 0, 0.9, 0.15, 1.1, 0.15, 1.1, 0)
+mode = 2
+path_node = NodePath("..")
+path_interval_type = 0
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+material = SubResource("StandardMaterial3D_kvm67")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="spawn_enemy"]

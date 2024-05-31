@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://cwaen1k2nbns6"]
+
+[ext_resource type="PackedScene" uid="uid://cl7hsl31d62t7" path="res://Scenes/Dificulty_Manager.tscn" id="1_r7hb7"]
+[ext_resource type="Material" uid="uid://ypwh44fwvdw4" path="res://Assets/materials/Grass-004/grass.tres" id="1_rg1si"]
+[ext_resource type="MeshLibrary" uid="uid://cno63b40u188" path="res://MeshLibrary/SpaceLibrary.tres" id="2_pubki"]
+[ext_resource type="PackedScene" uid="uid://bxsnxpfj2xxgf" path="res://Scenes/enemy_path.tscn" id="5_1umod"]
+[ext_resource type="PackedScene" uid="uid://cja0m2tp1ti8h" path="res://Entities/Player/Base.tscn" id="5_eulne"]
+[ext_resource type="PackedScene" uid="uid://v14bkg7l0igg" path="res://Entities/RayPickerCamera/RayPickerCamera.tscn" id="5_vxci1"]
+[ext_resource type="Script" path="res://Scripts/TurretManager.gd" id="7_aem8c"]
+[ext_resource type="PackedScene" uid="uid://cbrl6cjfbtad6" path="res://Entities/Player/Turret/Turret.tscn" id="7_cadl4"]
+[ext_resource type="Script" path="res://Scripts/GoldInterface.gd" id="9_oqxts"]
+[ext_resource type="PackedScene" uid="uid://dt2t8di7be2sc" path="res://UserInterface/victory_layer.tscn" id="10_4xug0"]
+
+[sub_resource type="Curve" id="Curve_3droh"]
+min_value = 0.5
+max_value = 5.0
+_data = [Vector2(1e-05, 2), 0.0, -1.50002, 0, 1, Vector2(1, 0.5), -1.50002, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_uavmj"]
+min_value = 10.0
+max_value = 150.0
+_data = [Vector2(0, 14.6154), 0.0, 135.385, 0, 1, Vector2(1, 150), 135.385, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lbyot"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_7dbc8"]
+sky_material = SubResource("ProceduralSkyMaterial_lbyot")
+
+[sub_resource type="Environment" id="Environment_0d523"]
+background_mode = 2
+sky = SubResource("Sky_7dbc8")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_ve4au"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="BaseLevel" type="Node3D"]
+
+[node name="DificultyManager" parent="." node_paths=PackedStringArray("victory_layer") instance=ExtResource("1_r7hb7")]
+spawn_time_curve = SubResource("Curve_3droh")
+enemy_health_curve = SubResource("Curve_uavmj")
+victory_layer = NodePath("../VictoryLayer")
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_0d523")
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(100, 2, 100)
+material = ExtResource("1_rg1si")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("2_pubki")
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65527, 2, 0, 65528, 2, 0, 65529, 2, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65532, 1, 0, 65532, 0, 0, 65532, 65535, 0, 65532, 65534, 0, 65532, 65533, 0, 65532, 65532, 0, 65533, 65532, 0, 65534, 65532, 0, 65535, 65532, 0, 0, 65532, 0, 1, 65532, 0, 2, 65532, 0, 3, 65532, 0, 3, 65533, 0, 3, 65534, 0, 3, 65535, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 5, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 6, 2, 0, 5, 2, 0, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 65535, 65534, 0, 65534, 65534, 0, 0, 65534, 0, 65534, 65535, 0, 65534, 0, 0, 65534, 2, 0, 65534, 1, 0, 65534, 3, 0, 65534, 4, 0, 65533, 4, 0, 65532, 4, 0, 65531, 4, 0, 65530, 4, 0, 65529, 4, 0, 65528, 4, 0, 65527, 4, 0, 7, 65535, 0, 65529, 65534, 2)
+}
+
+[node name="RayPickerCamera" parent="." node_paths=PackedStringArray("turret_manager", "enemy_path", "gridmap") instance=ExtResource("5_vxci1")]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -3, 28, 12)
+turret_manager = NodePath("../TurretManager")
+enemy_path = NodePath("../EnemyPath")
+gridmap = NodePath("../GridMap")
+
+[node name="EnemyPath" parent="." node_paths=PackedStringArray("dificulty_manager", "victory_layer") instance=ExtResource("5_1umod")]
+dificulty_manager = NodePath("../DificultyManager")
+victory_layer = NodePath("../VictoryLayer")
+
+[node name="Base" parent="." instance=ExtResource("5_eulne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, -10)
+max_health = 150
+
+[node name="TurretManager" type="Node3D" parent="." node_paths=PackedStringArray("enemy_path")]
+script = ExtResource("7_aem8c")
+enemy_path = NodePath("../EnemyPath")
+_Turret = ExtResource("7_cadl4")
+
+[node name="GoldInterface" type="MarginContainer" parent="." groups=["GOLD_INTERFACE"]]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_right = 375.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+script = ExtResource("9_oqxts")
+
+[node name="GoldAvailable" type="Label" parent="GoldInterface"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Gold: TextPlaceHolder"
+label_settings = SubResource("LabelSettings_ve4au")
+
+[node name="VictoryLayer" parent="." instance=ExtResource("10_4xug0")]
+
+[connection signal="stop_spawning_enemies" from="DificultyManager" to="EnemyPath" method="_on_dificulty_manager_stop_spawning_enemies"]

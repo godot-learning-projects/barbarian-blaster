@@ -1,0 +1,44 @@
+6:46 - 3. Barbarian Blaster - 60. Rewarding the Player:
+There is no need to have multiple stars on the container, it is simpler to user %Star.duplicate method on %Star.get_parent().add_child() append
+That said, I just saw that there was intentional to keep those stars as modulated, on that purpose, it is easier than keep duplicating and modulating by code..
+
+
+---
+6:26 - 3. Barbarian Blaster - 51. For Loops and Targeting:
+If you know a bit more of programming, you may noticed that you can do this for loop without actually doing a for loop.
+You can use the filter function of the Array class (Array[PathFollow3D]) and keep over it. I do believe that use already built functions could make your programming journey much more efficient and easy. Since whenever that filter function get update and more efficient, your code will automatically be update too.
+
+Example:
+func get_filtered_array() -> Array[PathFollow3D]:
+	var filtered_array := enemy_path.get_children().filter(func(element): return element is PathFollow3D)
+	var enemies: Array[PathFollow3D) = []
+	var enemies.assign(filtered_array_
+	var enemies;
+
+Discussion about array typing:
+https://www.reddit.com/r/godot/comments/12dm8i2/comment/l4wm3xm/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+
+Array official documentation:
+https://docs.godotengine.org/en/stable/classes/class_array.html#class-array-method-filter
+
+
+---
+6:56 - 3. Barbarian Blaster - 58. Ending the Game:
+If you know a bit more about programming, you may noticed that there isn't necessary to do this for. You can just use the filter function of the Array and compare if the size of the returned array is bigger than 0.
+
+
+---
+4:35 - 1. Introduction & Setup - 7. Accessing Our Projects:
+This class even do not show where do access those projects. There isn't any link to the repository. If we want to access that, we are supposed to copy the path bar link manually?
+
+I'm just pointing out some points that I think could be better pointed on this class, please take it respectfully as a Brazilian, my english is not the best.
+
+
+---
+1:43 - 1. Introduction & Setup - 7. Accessing Our Projects:
+I saw that this class is about to explain about the gitlab, but it haven't the best beginning, I believe that it is like a cut from another video class, but seems that is missing an introduction to the topic. Wasn't mensioned even that Git is an versioning tool so far...
+
+
+---
+0:03 - 1. Introduction & Setup - 7. Accessing Our Projects:
+I think that it is missing like an introduction to the Gitlab 'cause not every student will already know about this tool. Since it is an beginners course, this lesson was quite a jump...

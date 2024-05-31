@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://v14bkg7l0igg"]
 
-[ext_resource type="Script" path="res://Entities/RayPickerCamera/ray_picker_camera.gd" id="1_se6ss"]
+[ext_resource type="Script" path="res://Entities/RayPickerCamera/RayPickerCamera.gd" id="1_se6ss"]
 
 [node name="RayPickerCamera" type="Camera3D"]
 script = ExtResource("1_se6ss")
