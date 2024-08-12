@@ -59,7 +59,7 @@ environment = SubResource("Environment_0d523")
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(100, 2, 100)
+size = Vector3(150, 2, 100)
 material = ExtResource("1_rg1si")
 
 [node name="GridMap" type="GridMap" parent="."]
@@ -71,7 +71,8 @@ data = {
 }
 
 [node name="RayPickerCamera" parent="." node_paths=PackedStringArray("turret_manager", "enemy_path", "gridmap") instance=ExtResource("5_vxci1")]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, -3, 28, 12)
+transform = Transform3D(1, 0, 0, 0, 0.529268, 0.848455, 0, -0.848455, 0.529268, 0.794645, 20.3291, 21.9616)
+far = 200.0
 turret_manager = NodePath("../TurretManager")
 enemy_path = NodePath("../EnemyPath")
 gridmap = NodePath("../GridMap")
@@ -81,7 +82,7 @@ dificulty_manager = NodePath("../DificultyManager")
 victory_layer = NodePath("../VictoryLayer")
 
 [node name="Base" parent="." instance=ExtResource("5_eulne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.05, 0, -10)
 max_health = 150
 
 [node name="TurretManager" type="Node3D" parent="." node_paths=PackedStringArray("enemy_path")]

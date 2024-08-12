@@ -1,14 +1,15 @@
 extends Node3D
 class_name Turret
 
-@onready var _turret_top: MeshInstance3D = $TurretBase/TurretTop
+@onready var _turret_top: Node3D = $TurretBase/TurretTop
 @onready var _turret_range_view := $TurretBase/TurretRangeView
+@onready var _cannon_fire_origin = $TurretBase/TurretTop/CannonFireOrigin
 @onready var _animation_player = $AnimationPlayer
 
 @export var _projectile: PackedScene;
 @export var turret_range: float = 10.0;
 
-var current_target = null
+var current_target: PathFollow3D = null
 var _enemy_path: Path3D
 
 # Instance parameters constructor setter.
@@ -40,19 +41,19 @@ func shoot() -> void:
 		return shoot()
 		
 	# Instantiate a new project and throw to the target
-	
-	look_at(current_target.global_position, Vector3.UP, true)
+	_turret_top.look_at(current_target.global_position, Vector3.UP, true)
+	_turret_top.rotate_x(0.0)
 	var shot = _projectile.instantiate()
 	get_parent().add_child(shot)
 	_animation_player.play("Shoot")
-	shot.global_position = _turret_top.global_position
+	shot.global_position = _cannon_fire_origin.global_position
 	shot.rotation = _turret_top.global_rotation
 	shot.direction = _turret_top.global_transform.basis.z
 
 # Keep tracking the enemy
 func _physics_process(_delta):
 	if current_target != null:
-		look_at(current_target.global_position, Vector3.UP, true)
+		_turret_top.look_at(current_target.global_position, Vector3.UP, true)
 
 # Find a new enemy
 func _aim_next_enemy() -> bool:

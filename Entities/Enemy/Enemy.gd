@@ -2,7 +2,7 @@ extends PathFollow3D
 
 class_name Enemy
 
-@onready var user_interface = get_tree().get_first_node_in_group("USER_INTERFACE")
+@onready var gold_interface = get_tree().get_first_node_in_group("GOLD_INTERFACE")
 @onready var base = get_tree().get_first_node_in_group("BASE")
 @onready var animation_player = $AnimationPlayer
 @onready var health_label = $health_label
@@ -21,7 +21,7 @@ var current_health: int = 0:
 		current_health = health_in
 		_update_label(current_health)
 		if current_health < 1:
-			user_interface.gold += gold
+			gold_interface.gold += gold
 			queue_free()
 
 const GREEN: Color = Color.GREEN

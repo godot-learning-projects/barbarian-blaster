@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-@onready var star_1 := %Star1
 @onready var star_2 := %Star2
 @onready var star_3 := %Star3
 @onready var health_label := %HealthLabel
