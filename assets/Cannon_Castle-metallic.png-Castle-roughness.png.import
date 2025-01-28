@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://koxaf5yg5rww"
 path.s3tc="res://.godot/imported/Cannon_Castle-metallic.png-Castle-roughness.png-c1284716465b63fad2e513f0c7590ee2.s3tc.ctex"
+path.etc2="res://.godot/imported/Cannon_Castle-metallic.png-Castle-roughness.png-c1284716465b63fad2e513f0c7590ee2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/Cannon_Castle-metallic.png-Castle-roughness.png"
-dest_files=["res://.godot/imported/Cannon_Castle-metallic.png-Castle-roughness.png-c1284716465b63fad2e513f0c7590ee2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cannon_Castle-metallic.png-Castle-roughness.png-c1284716465b63fad2e513f0c7590ee2.s3tc.ctex", "res://.godot/imported/Cannon_Castle-metallic.png-Castle-roughness.png-c1284716465b63fad2e513f0c7590ee2.etc2.ctex"]
 
 [params]
 

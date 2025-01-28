@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2g3205le6uou"
 path.s3tc="res://.godot/imported/TurretBase_castle-colour-palette.png-22feb26d895aa2c628a56fc928fe363d.s3tc.ctex"
+path.etc2="res://.godot/imported/TurretBase_castle-colour-palette.png-22feb26d895aa2c628a56fc928fe363d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/TurretBase_castle-colour-palette.png"
-dest_files=["res://.godot/imported/TurretBase_castle-colour-palette.png-22feb26d895aa2c628a56fc928fe363d.s3tc.ctex"]
+dest_files=["res://.godot/imported/TurretBase_castle-colour-palette.png-22feb26d895aa2c628a56fc928fe363d.s3tc.ctex", "res://.godot/imported/TurretBase_castle-colour-palette.png-22feb26d895aa2c628a56fc928fe363d.etc2.ctex"]
 
 [params]
 
