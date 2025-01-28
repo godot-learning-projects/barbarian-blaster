@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dugjjpeppgu3o"
-path.s3tc="res://.godot/imported/Rocks_Castle-metallic.png-Castle-roughness.png-d4898be876287c01c5a64aa5e26d9deb.s3tc.ctex"
+path.s3tc="res://.godot/imported/Rocks_Castle-metallic.png-Castle-roughness.png-851a98d0fcd208b069d35e784d4b6894.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Rocks_Castle-metallic.png-Castle-roughness.png"
-dest_files=["res://.godot/imported/Rocks_Castle-metallic.png-Castle-roughness.png-d4898be876287c01c5a64aa5e26d9deb.s3tc.ctex"]
+source_file="res://assets/Rocks_Castle-metallic.png-Castle-roughness.png"
+dest_files=["res://.godot/imported/Rocks_Castle-metallic.png-Castle-roughness.png-851a98d0fcd208b069d35e784d4b6894.s3tc.ctex"]
 
 [params]
 

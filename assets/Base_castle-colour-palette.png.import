@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5urxdkmxgfgk"
-path.s3tc="res://.godot/imported/Base_castle-colour-palette.png-e4c518f6beca0791cb4a0994150a50a2.s3tc.ctex"
+path.s3tc="res://.godot/imported/Base_castle-colour-palette.png-b4481ff762b2b4aeb1f8ba3161f54610.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Base_castle-colour-palette.png"
-dest_files=["res://.godot/imported/Base_castle-colour-palette.png-e4c518f6beca0791cb4a0994150a50a2.s3tc.ctex"]
+source_file="res://assets/Base_castle-colour-palette.png"
+dest_files=["res://.godot/imported/Base_castle-colour-palette.png-b4481ff762b2b4aeb1f8ba3161f54610.s3tc.ctex"]
 
 [params]
 

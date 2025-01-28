@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://de7dre2w8k0eb"
-path="res://.godot/imported/Rocks.glb-363bf1368b682d9dae7be64e612a88b7.scn"
+path="res://.godot/imported/Rocks.glb-12c85b97d56d9bdcae72deebb9d8ba29.scn"
 
 [deps]
 
-source_file="res://Assets/Rocks.glb"
-dest_files=["res://.godot/imported/Rocks.glb-363bf1368b682d9dae7be64e612a88b7.scn"]
+source_file="res://assets/Rocks.glb"
+dest_files=["res://.godot/imported/Rocks.glb-12c85b97d56d9bdcae72deebb9d8ba29.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,6 +29,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
 gltf/naming_version=1

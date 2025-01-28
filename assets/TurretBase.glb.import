@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bs8gstae4py5t"
-path="res://.godot/imported/TurretBase.glb-2bc0b44b2e5d03f053d674f6e3f75b0c.scn"
+path="res://.godot/imported/TurretBase.glb-3fac8d77fa18d0e6cf0289e5b9790df8.scn"
 
 [deps]
 
-source_file="res://Assets/TurretBase.glb"
-dest_files=["res://.godot/imported/TurretBase.glb-2bc0b44b2e5d03f053d674f6e3f75b0c.scn"]
+source_file="res://assets/TurretBase.glb"
+dest_files=["res://.godot/imported/TurretBase.glb-3fac8d77fa18d0e6cf0289e5b9790df8.scn"]
 
 [params]
 
@@ -17,6 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,6 +29,7 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
 gltf/naming_version=1

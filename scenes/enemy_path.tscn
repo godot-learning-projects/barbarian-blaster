@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxsnxpfj2xxgf"]
+[gd_scene load_steps=6 format=3 uid="uid://bxsnxpfj2xxgf"]
 
 [ext_resource type="Script" path="res://Scripts/EnemyPath.gd" id="1_ecg0r"]
 [ext_resource type="PackedScene" uid="uid://tt6273da8oe3" path="res://Entities/Enemy/Enemy.tscn" id="2_e82tv"]
@@ -11,7 +11,10 @@ _data = {
 point_count = 7
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvm67"]
-albedo_color = Color(0.454902, 0.27451, 0.0862745, 1)
+albedo_color = Color(0.326594, 0.320274, 0.325105, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7xme"]
+albedo_color = Color(0.762314, 0.756189, 0.760861, 1)
 
 [node name="EnemyPath" type="Path3D"]
 curve = SubResource("Curve3D_u514a")
@@ -44,7 +47,7 @@ path_local = true
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
-material = SubResource("StandardMaterial3D_kvm67")
+material = SubResource("StandardMaterial3D_a7xme")
 
 [node name="RightEdge" type="CSGPolygon3D" parent="."]
 polygon = PackedVector2Array(0.9, 0, 0.9, 0.15, 1.1, 0.15, 1.1, 0)
@@ -58,7 +61,7 @@ path_local = true
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
-material = SubResource("StandardMaterial3D_kvm67")
+material = SubResource("StandardMaterial3D_a7xme")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0

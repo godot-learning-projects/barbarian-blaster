@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b21ar311m2gtw"
-path.s3tc="res://.godot/imported/Tree_castle-colour-palette.png-69ad8fcbf0e6df3068b372f94494bb3c.s3tc.ctex"
+path.s3tc="res://.godot/imported/Tree_castle-colour-palette.png-dc95d34d1e36a327255596e334edb39c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Tree_castle-colour-palette.png"
-dest_files=["res://.godot/imported/Tree_castle-colour-palette.png-69ad8fcbf0e6df3068b372f94494bb3c.s3tc.ctex"]
+source_file="res://assets/Tree_castle-colour-palette.png"
+dest_files=["res://.godot/imported/Tree_castle-colour-palette.png-dc95d34d1e36a327255596e334edb39c.s3tc.ctex"]
 
 [params]
 

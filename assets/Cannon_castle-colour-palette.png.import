@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyswdgy71aqrv"
-path.s3tc="res://.godot/imported/Cannon_castle-colour-palette.png-bb2f51f406749e3affa10004280f710a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Cannon_castle-colour-palette.png-8acef7233f67e336ae309a22e2ab14b2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/Cannon_castle-colour-palette.png"
-dest_files=["res://.godot/imported/Cannon_castle-colour-palette.png-bb2f51f406749e3affa10004280f710a.s3tc.ctex"]
+source_file="res://assets/Cannon_castle-colour-palette.png"
+dest_files=["res://.godot/imported/Cannon_castle-colour-palette.png-8acef7233f67e336ae309a22e2ab14b2.s3tc.ctex"]
 
 [params]
 
