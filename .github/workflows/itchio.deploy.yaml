@@ -125,3 +125,60 @@ jobs:
         with:
           name: mac
           path: build/mac
+
+  deploy-windows:
+    name: Windows deploy
+    runs-on: ubuntu-20.04
+    needs: build-windows
+    steps:
+      - name: Retrieve artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: windows
+          path: build/windows
+      - name: Deploy
+        uses: josephbmanley/butler-publish-itchio-action@v1.0.3
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: windows
+          ITCH_USER: ${{ vars.ITCH_IO_USER }}
+          ITCH_GAME: ${{ vars.ITCH_IO_GAME }}
+          PACKAGE: build/windows
+
+  deploy-linux:
+    name: Linux deploy
+    runs-on: ubuntu-20.04
+    needs: build-linux
+    steps:
+      - name: Retrieve artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: linux
+          path: build/linux
+      - name: Deploy
+        uses: josephbmanley/butler-publish-itchio-action@v1.0.3
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: linux
+          ITCH_USER: ${{ vars.ITCH_IO_USER }}
+          ITCH_GAME: ${{ vars.ITCH_IO_GAME }}
+          PACKAGE: build/linux
+
+  deploy-mac:
+    name: Web deploy
+    runs-on: ubuntu-20.04
+    needs: build-web
+    steps:
+      - name: Retrieve artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mac
+          path: build/mac
+      - name: Deploy
+        uses: josephbmanley/butler-publish-itchio-action@v1.0.3
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: osx
+          ITCH_USER: ${{ vars.ITCH_IO_USER }}
+          ITCH_GAME: ${{ vars.ITCH_IO_GAME }}
+          PACKAGE: build/mac
