@@ -1,15 +1,15 @@
 [gd_scene load_steps=17 format=3 uid="uid://cwaen1k2nbns6"]
 
-[ext_resource type="PackedScene" uid="uid://cl7hsl31d62t7" path="res://scenes/dificulty_manager.tscn" id="1_ncc7r"]
+[ext_resource type="PackedScene" uid="uid://cl7hsl31d62t7" path="res://scenes/dificultymanager.tscn" id="1_ncc7r"]
 [ext_resource type="Material" uid="uid://ypwh44fwvdw4" path="res://assets/materials/Grass-004/grass.tres" id="2_u45f2"]
-[ext_resource type="MeshLibrary" uid="uid://cno63b40u188" path="res://meshlibrary/space_library.tres" id="3_3qq7r"]
-[ext_resource type="PackedScene" uid="uid://v14bkg7l0igg" path="res://entities/ray_picker_camera/raypickercamera.tscn" id="4_j3ldd"]
-[ext_resource type="PackedScene" uid="uid://bxsnxpfj2xxgf" path="res://scenes/enemy_path.tscn" id="5_axke3"]
+[ext_resource type="MeshLibrary" uid="uid://cno63b40u188" path="res://meshlibrary/spacelibrary.tres" id="3_3qq7r"]
+[ext_resource type="PackedScene" uid="uid://v14bkg7l0igg" path="res://entities/raypickercamera/raypickercamera.tscn" id="4_j3ldd"]
+[ext_resource type="PackedScene" uid="uid://bxsnxpfj2xxgf" path="res://scenes/enemypath.tscn" id="5_axke3"]
 [ext_resource type="PackedScene" uid="uid://cja0m2tp1ti8h" path="res://entities/player/base.tscn" id="6_uby1k"]
-[ext_resource type="Script" path="res://scripts/turret_manager.gd" id="7_ajwu8"]
-[ext_resource type="PackedScene" uid="uid://cbrl6cjfbtad6" path="res://entities/player/Turret/turret.tscn" id="8_yxr3t"]
-[ext_resource type="Script" path="res://scripts/gold_interface.gd" id="9_b81pd"]
-[ext_resource type="PackedScene" uid="uid://dt2t8di7be2sc" path="res://userinterface/victory_layer.tscn" id="10_3ddm8"]
+[ext_resource type="Script" path="res://scripts/turretmanager.gd" id="7_ajwu8"]
+[ext_resource type="PackedScene" uid="uid://cbrl6cjfbtad6" path="res://entities/player/turret/turret.tscn" id="8_yxr3t"]
+[ext_resource type="Script" path="res://scripts/goldinterface.gd" id="9_b81pd"]
+[ext_resource type="PackedScene" uid="uid://dt2t8di7be2sc" path="res://userinterface/victorylayer.tscn" id="10_3ddm8"]
 
 [sub_resource type="Curve" id="Curve_3droh"]
 min_value = 0.5
