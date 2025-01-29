@@ -165,7 +165,7 @@ jobs:
           PACKAGE: build/linux
 
   deploy-mac:
-    name: Web deploy
+    name: Mac deploy
     runs-on: ubuntu-20.04
     needs: build-web
     steps:

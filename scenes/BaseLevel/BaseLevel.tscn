@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://cwaen1k2nbns6"]
 
-[ext_resource type="PackedScene" uid="uid://cl7hsl31d62t7" path="res://Scenes/Dificulty_Manager.tscn" id="1_ncc7r"]
+[ext_resource type="PackedScene" uid="uid://cl7hsl31d62t7" path="res://scenes/Dificulty_Manager.tscn" id="1_ncc7r"]
 [ext_resource type="Material" uid="uid://ypwh44fwvdw4" path="res://assets/materials/Grass-004/grass.tres" id="2_u45f2"]
 [ext_resource type="MeshLibrary" uid="uid://cno63b40u188" path="res://meshlibrary/SpaceLibrary.tres" id="3_3qq7r"]
 [ext_resource type="PackedScene" uid="uid://v14bkg7l0igg" path="res://entities/RayPickerCamera/RayPickerCamera.tscn" id="4_j3ldd"]
-[ext_resource type="PackedScene" uid="uid://bxsnxpfj2xxgf" path="res://Scenes/enemy_path.tscn" id="5_axke3"]
+[ext_resource type="PackedScene" uid="uid://bxsnxpfj2xxgf" path="res://scenes/enemy_path.tscn" id="5_axke3"]
 [ext_resource type="PackedScene" uid="uid://cja0m2tp1ti8h" path="res://entities/Player/Base.tscn" id="6_uby1k"]
 [ext_resource type="Script" path="res://scripts/TurretManager.gd" id="7_ajwu8"]
 [ext_resource type="PackedScene" uid="uid://cbrl6cjfbtad6" path="res://entities/Player/Turret/Turret.tscn" id="8_yxr3t"]
