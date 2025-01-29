@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://tt6273da8oe3"]
 
-[ext_resource type="Script" path="res://Entities/Enemy/Enemy.gd" id="1_vj05q"]
+[ext_resource type="Script" path="res://entities/Enemy/Enemy.gd" id="1_vj05q"]
 [ext_resource type="PackedScene" uid="uid://q88oolcqya6i" path="res://assets/Barbarian.glb" id="2_hwou7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t5a5o"]

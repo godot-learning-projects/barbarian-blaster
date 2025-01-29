@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dt2t8di7be2sc"]
 
-[ext_resource type="Script" path="res://Scripts/victory_layer.gd" id="1_wrt76"]
-[ext_resource type="Texture2D" uid="uid://iut8cgylprkj" path="res://Assets/star.png" id="2_wugqs"]
+[ext_resource type="Script" path="res://scripts/victory_layer.gd" id="1_wrt76"]
+[ext_resource type="Texture2D" uid="uid://iut8cgylprkj" path="res://assets/star.png" id="2_wugqs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o76y8"]
 font_size = 96
