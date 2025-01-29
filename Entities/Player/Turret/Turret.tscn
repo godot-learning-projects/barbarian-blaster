@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cbrl6cjfbtad6"]
 
-[ext_resource type="Script" path="res://entities/Player/Turret/Turret.gd" id="1_xk6oy"]
-[ext_resource type="PackedScene" uid="uid://bufj2q7vh2w7l" path="res://entities/Player/Turret/Projectile.tscn" id="2_6qk0f"]
+[ext_resource type="Script" path="res://entities/player/Turret/turret.gd" id="1_xk6oy"]
+[ext_resource type="PackedScene" uid="uid://bufj2q7vh2w7l" path="res://entities/player/Turret/projectile.tscn" id="2_6qk0f"]
 [ext_resource type="PackedScene" uid="uid://bs8gstae4py5t" path="res://assets/TurretBase.glb" id="3_phqq5"]
 [ext_resource type="PackedScene" uid="uid://d14qi4jldbgdy" path="res://assets/Cannon.glb" id="4_2ym88"]
 

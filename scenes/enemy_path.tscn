@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bxsnxpfj2xxgf"]
 
-[ext_resource type="Script" path="res://scripts/EnemyPath.gd" id="1_ecg0r"]
-[ext_resource type="PackedScene" uid="uid://tt6273da8oe3" path="res://entities/Enemy/Enemy.tscn" id="2_e82tv"]
+[ext_resource type="Script" path="res://scripts/enemy_path.gd" id="1_ecg0r"]
+[ext_resource type="PackedScene" uid="uid://tt6273da8oe3" path="res://entities/enemy/enemy.tscn" id="2_e82tv"]
 
 [sub_resource type="Curve3D" id="Curve3D_u514a"]
 _data = {

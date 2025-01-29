@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cja0m2tp1ti8h"]
 
-[ext_resource type="Script" path="res://entities/Player/Base.gd" id="1_gqngn"]
+[ext_resource type="Script" path="res://entities/player/base.gd" id="1_gqngn"]
 [ext_resource type="PackedScene" uid="uid://cb5174ywc3x2l" path="res://assets/Base.glb" id="2_ief4k"]
 
 [node name="Base" type="Node3D" groups=["BASE"]]

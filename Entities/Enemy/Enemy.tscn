@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://tt6273da8oe3"]
 
-[ext_resource type="Script" path="res://entities/Enemy/Enemy.gd" id="1_vj05q"]
-[ext_resource type="PackedScene" uid="uid://q88oolcqya6i" path="res://assets/Barbarian.glb" id="2_hwou7"]
+[ext_resource type="Script" path="res://entities/enemy/enemy.gd" id="1_j5b1t"]
+[ext_resource type="PackedScene" uid="uid://q88oolcqya6i" path="res://assets/Barbarian.glb" id="2_yonms"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_t5a5o"]
 radius = 1.0
@@ -127,7 +127,7 @@ bind/17/pose = Transform3D(1.54245e-06, -4.19436, -0.168111, -2.17438e-07, -0.16
 
 [node name="Enemy" type="PathFollow3D"]
 loop = false
-script = ExtResource("1_vj05q")
+script = ExtResource("1_j5b1t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -158,7 +158,7 @@ libraries = {
 "": SubResource("AnimationLibrary_v86oa")
 }
 
-[node name="Barbarian" parent="." instance=ExtResource("2_hwou7")]
+[node name="Barbarian" parent="." instance=ExtResource("2_yonms")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.1, 0)
 
 [node name="Skeleton3D" parent="Barbarian/Armature" index="0"]
